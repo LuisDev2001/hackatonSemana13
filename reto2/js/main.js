@@ -1,29 +1,3 @@
-//Modal añadir Pet Formulario
-const modalAddCardPet = () => {
-  const btnAddPet = document.querySelector(".add-pet");
-  const grayOut = document.querySelector(".gray-out");
-  const formAddPet = document.querySelector("#formAddPet");
-  const modalDelete = document.querySelector(".modal-delete");
-  //botones
-  const btnCancel = document.querySelector("#cancel");
-  const btnAccept = document.querySelector("#add");
-  btnAddPet.addEventListener("click", () => {
-    modalDelete.style.display = "none";
-    formAddPet.style.display = "flex";
-    grayOut.style.display = "flex";
-  });
-
-  //Añadir una card
-  btnAccept.addEventListener("click", addPet);
-
-  //Cerrar modal
-  btnCancel.addEventListener("click", (e) => {
-    e.preventDefault();
-    formAddPet.style.display = "none";
-    grayOut.style.display = "none";
-    return false;
-  });
-};
 //Funcion eliminar card
 const deleteCard = () => {
   const modalBody = document.querySelector(".modal-delete");
@@ -143,6 +117,32 @@ const addPet = (e) => {
   limpiarInputs();
   formAddPet.style.display = "none";
   grayOut.style.display = "none";
+};
+//Modal añadir Pet Formulario
+const modalAddCardPet = () => {
+  const btnAddPet = document.querySelector(".add-pet");
+  const grayOut = document.querySelector(".gray-out");
+  const formAddPet = document.querySelector("#formAddPet");
+  const modalDelete = document.querySelector(".modal-delete");
+  //botones
+  const btnCancel = document.querySelector("#cancel");
+  const btnAccept = document.querySelector("#add");
+  btnAddPet.addEventListener("click", () => {
+    modalDelete.style.display = "none";
+    formAddPet.style.display = "flex";
+    grayOut.style.display = "flex";
+  });
+
+  //Añadir una card
+  btnAccept.addEventListener("click", addPet);
+
+  //Cerrar modal
+  btnCancel.addEventListener("click", (e) => {
+    e.preventDefault();
+    formAddPet.style.display = "none";
+    grayOut.style.display = "none";
+    return false;
+  });
 };
 function limpiarInputs() {
   document.getElementById("name").value = "";
