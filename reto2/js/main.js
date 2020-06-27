@@ -79,9 +79,9 @@ const modalEdit = () => {
     btnUpdate.addEventListener("click", (e) => {
       e.preventDefault();
       namePet.textContent = document.getElementById("nameEdit").value;
-      countryPet.textContent = document.getElementById("phoneEdit").value;
-      phonePet.textContent = document.getElementById("emailEdit").value;
-      mailPet.textContent = document.getElementById("countryEdit").value;
+      countryPet.textContent = document.getElementById("countryEdit").value;
+      phonePet.textContent = document.getElementById("phoneEdit").value;
+      mailPet.textContent = document.getElementById("emailEdit").value;
       desclPet.textContent = document.getElementById("descriptionEdit").value;
       formEditPet.style.display = "none";
       modalEdit.style.display = "none";
