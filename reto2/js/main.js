@@ -74,6 +74,7 @@ const modalEdit = () => {
   const btnEdit = document.querySelector(".pet-action-edit");
   const modalEdit = document.querySelector(".gray-out.edit");
   const btnCancel = document.querySelector("#cancel2");
+
   btnEdit.addEventListener("click", () => {
     formEditPet.style.display = "flex";
     modalEdit.style.display = "flex";
@@ -103,6 +104,13 @@ const modalEdit = () => {
     const btnUpdate = document.querySelector("#addEdit");
     btnUpdate.addEventListener("click", (e) => {
       e.preventDefault();
+      namePet.textContent = document.getElementById("nameEdit").value;
+      countryPet.textContent = document.getElementById("phoneEdit").value;
+      phonePet.textContent = document.getElementById("emailEdit").value;
+      mailPet.textContent = document.getElementById("countryEdit").value;
+      desclPet.textContent = document.getElementById("descriptionEdit").value;
+      formEditPet.style.display = "none";
+      modalEdit.style.display = "none";
     });
   }
   update();
