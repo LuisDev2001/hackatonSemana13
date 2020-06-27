@@ -1,0 +1,26 @@
+.modal-buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  .btn {
+    width: 129px;
+    height: 35px;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    font-family: var(--font-helvetica);
+    transition: 0.25s ease background;
+  }
+  #yes {
+    margin-right: 6px;
+    background: var(--color-gray2);
+  }
+  #yes:hover {
+    background: var(--color-gray3);
+  }
+  #no:hover {
+    background: var(--color-gray3);
+  }
+}

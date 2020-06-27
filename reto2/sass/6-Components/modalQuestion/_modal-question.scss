@@ -1,0 +1,21 @@
+@import "../../2-Tools/tools.scss";
+
+.modal-delete {
+  display: none;
+  width: 469px;
+  height: 150px;
+  padding: 1rem 1.5rem;
+  background: var(--color-white);
+  box-shadow: 0 0 6px rgba(53, 53, 53, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .modal-question {
+    font-family: var(--font-helvetica);
+    font-size: 14px;
+  }
+  @include desktop {
+    width: 50%;
+  }
+}

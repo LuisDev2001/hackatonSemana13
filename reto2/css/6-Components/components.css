@@ -66,4 +66,67 @@
   margin: 7px 0;
 }
 
+.modal-delete {
+  display: none;
+  width: 469px;
+  height: 150px;
+  padding: 1rem 1.5rem;
+  background: var(--color-white);
+  box-shadow: 0 0 6px rgba(53, 53, 53, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.modal-delete .modal-question {
+  font-family: var(--font-helvetica);
+  font-size: 14px;
+}
+@media (min-width: 1200px) {
+  .modal-delete {
+    width: 50%;
+  }
+}
+
+.gray-out {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.modal-buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.modal-buttons .btn {
+  width: 129px;
+  height: 35px;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  font-family: var(--font-helvetica);
+  transition: 0.25s ease background;
+}
+.modal-buttons #yes {
+  margin-right: 6px;
+  background: var(--color-gray2);
+}
+.modal-buttons #yes:hover {
+  background: var(--color-gray3);
+}
+.modal-buttons #no:hover {
+  background: var(--color-gray3);
+}
+
 /*# sourceMappingURL=components.css.map */
