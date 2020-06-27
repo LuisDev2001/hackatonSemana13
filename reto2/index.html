@@ -14,10 +14,39 @@
           <i class="fas fa-plus"></i>
           Agregar mascota
         </div>
+        <div class="gray-out">
+          <form action="#" method="post" id="formAddPet">
+            <h3>Add a info Pet</h3>
+            <label for="name">
+              Nombre:
+              <input type="text" id="name" />
+            </label>
+            <label for="phone">
+              Telefono:
+              <input type="tel" id="phone" />
+            </label>
+            <label for="email">
+              Correo:
+              <input type="email" id="email" />
+            </label>
+            <label for="country">
+              País:
+              <input type="text" id="country" />
+            </label>
+            <label for="description">
+              Descripción:
+              <textarea id="description" cols="30" rows="10"></textarea>
+            </label>
+            <div class="modal-buttons">
+              <button id="add" class="btn" value="1">Aceptar</button>
+              <button id="cancel" class="btn" value="0">Cancelar</button>
+            </div>
+          </form>
+        </div>
       </div>
     </header>
     <section class="pet">
-      <div class="gray-out">
+      <div class="gray-out close">
         <div class="modal-delete">
           <p class="modal-question">
             ¿Seguro que quieres eliminar este item?

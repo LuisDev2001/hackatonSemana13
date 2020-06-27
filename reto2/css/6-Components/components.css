@@ -129,4 +129,67 @@
   background: var(--color-gray3);
 }
 
+#formAddPet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: 10px;
+  font-family: var(--font-helvetica);
+}
+#formAddPet h3 {
+  margin-bottom: 1rem;
+}
+#formAddPet label {
+  margin-bottom: 1rem;
+}
+#formAddPet label:last-child {
+  margin-bottom: 0;
+}
+#formAddPet input {
+  width: 200px;
+  height: 30px;
+  outline: none;
+  padding: 5px;
+  border: 1px solid var(--color-gray3);
+}
+#formAddPet label[for=description] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#formAddPet #description {
+  width: 290px;
+  max-width: 300px;
+  min-width: 290px;
+  max-height: 150px;
+  height: 145px;
+  min-height: 150px;
+  outline: none;
+  border: 1px solid var(--color-gray3);
+  padding: 10px;
+  font-family: var(--font-helvetica);
+}
+#formAddPet #add {
+  margin-right: 6px;
+  background: #0171ea;
+  color: var(--color-white);
+  border: 1px solid var(--color-gray3);
+}
+#formAddPet #add:hover {
+  background: var(--color-white);
+  color: var(--color-black);
+  border: 1px solid var(--color-gray3);
+}
+#formAddPet #cancel {
+  border: 1px solid var(--color-gray3);
+}
+#formAddPet #cancel:hover {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
 /*# sourceMappingURL=components.css.map */
