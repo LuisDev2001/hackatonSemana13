@@ -130,7 +130,8 @@
   background: var(--color-gray3);
 }
 
-#formAddPet {
+#formAddPet,
+#formEditPet {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,29 +141,37 @@
   border-radius: 10px;
   font-family: var(--font-helvetica);
 }
-#formAddPet h3 {
+#formAddPet h3,
+#formEditPet h3 {
   margin-bottom: 1rem;
 }
-#formAddPet label {
+#formAddPet label,
+#formEditPet label {
   margin-bottom: 1rem;
 }
-#formAddPet label:last-child {
+#formAddPet label:last-child,
+#formEditPet label:last-child {
   margin-bottom: 0;
 }
-#formAddPet input {
+#formAddPet input,
+#formEditPet input {
   width: 200px;
   height: 30px;
   outline: none;
   padding: 5px;
   border: 1px solid var(--color-gray3);
 }
-#formAddPet label[for=description] {
+#formAddPet label[for=description],
+#formEditPet label[for=description] {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-#formAddPet #description {
+#formAddPet #description,
+#formAddPet #descriptionEdit,
+#formEditPet #description,
+#formEditPet #descriptionEdit {
   width: 290px;
   max-width: 300px;
   min-width: 290px;
@@ -174,21 +183,38 @@
   padding: 10px;
   font-family: var(--font-helvetica);
 }
-#formAddPet #add {
+#formAddPet #add,
+#formAddPet #addEdit,
+#formEditPet #add,
+#formEditPet #addEdit {
   margin-right: 6px;
   background: #0171ea;
   color: var(--color-white);
   border: 1px solid var(--color-gray3);
 }
-#formAddPet #add:hover {
+#formAddPet #add:hover,
+#formAddPet #addEdit:hover,
+#formEditPet #add:hover,
+#formEditPet #addEdit:hover {
   background: var(--color-white);
   color: var(--color-black);
   border: 1px solid var(--color-gray3);
 }
-#formAddPet #cancel {
+#formAddPet #addEdit.update,
+#formEditPet #addEdit.update {
+  background: #01ea01;
+  transition: 0.3s eases;
+}
+#formAddPet #cancel,
+#formAddPet #cance2,
+#formEditPet #cancel,
+#formEditPet #cance2 {
   border: 1px solid var(--color-gray3);
 }
-#formAddPet #cancel:hover {
+#formAddPet #cancel:hover,
+#formAddPet #cance2:hover,
+#formEditPet #cancel:hover,
+#formEditPet #cance2:hover {
   background: var(--color-white);
   color: var(--color-black);
 }

@@ -70,6 +70,44 @@ const modal = () => {
   });
 };
 
+const modalEdit = () => {
+  const btnEdit = document.querySelector(".pet-action-edit");
+  const modalEdit = document.querySelector(".gray-out.edit");
+  const btnCancel = document.querySelector("#cancel2");
+  btnEdit.addEventListener("click", () => {
+    formEditPet.style.display = "flex";
+    modalEdit.style.display = "flex";
+  });
+
+  // const cardInformation = document.querySelector(".pet-information");
+  const namePet = document.querySelector(".pet-name");
+  const countryPet = document.querySelector(".pet-country");
+  const phonePet = document.querySelector(".pet-phone");
+  const mailPet = document.querySelector(".pet-mail");
+  const desclPet = document.querySelector(".pet-description");
+  //Inputs
+  document.getElementById("nameEdit").value = namePet.textContent;
+  document.getElementById("phoneEdit").value = phonePet.textContent;
+  document.getElementById("emailEdit").value = mailPet.textContent;
+  document.getElementById("countryEdit").value = countryPet.textContent;
+  document.getElementById("descriptionEdit").value = desclPet.textContent;
+
+  //Cerrar modal
+  btnCancel.addEventListener("click", (e) => {
+    e.preventDefault();
+    formEditPet.style.display = "none";
+    modalEdit.style.display = "none";
+  });
+
+  function update() {
+    const btnUpdate = document.querySelector("#addEdit");
+    btnUpdate.addEventListener("click", (e) => {
+      e.preventDefault();
+    });
+  }
+  update();
+};
+
 const addPet = (e) => {
   e.preventDefault();
   //Traer los datos del formulario
@@ -93,13 +131,17 @@ const addPet = (e) => {
 
   modal();
   apperModalClose();
-  name.value = "";
-  phone.value = "";
-  email.value = "";
-  country.value = "";
-  description.value = "";
+  modalEdit();
+  limpiarInputs();
   formAddPet.style.display = "none";
   grayOut.style.display = "none";
 };
+function limpiarInputs() {
+  document.getElementById("name").value = "";
+  document.getElementById("phone").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("country").value = "";
+  document.getElementById("description").value = "";
+}
 
 modalAddCardPet();

@@ -1,4 +1,5 @@
-#formAddPet {
+#formAddPet,
+#formEditPet {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +32,8 @@
     align-items: center;
     justify-content: center;
   }
-  #description {
+  #description,
+  #descriptionEdit {
     width: 290px;
     max-width: 300px;
     min-width: 290px;
@@ -43,7 +45,8 @@
     padding: 10px;
     font-family: var(--font-helvetica);
   }
-  #add {
+  #add,
+  #addEdit {
     margin-right: 6px;
     background: #0171ea;
     color: var(--color-white);
@@ -55,7 +58,12 @@
       border: 1px solid var(--color-gray3);
     }
   }
-  #cancel {
+  #addEdit.update {
+    background: #01ea01;
+    transition: 0.3s eases;
+  }
+  #cancel,
+  #cance2 {
     border: 1px solid var(--color-gray3);
 
     &:hover {
