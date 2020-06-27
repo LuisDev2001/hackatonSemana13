@@ -19,6 +19,8 @@ const addPet = (e) => {
   };
   contenedorPadre.innerHTML += `<article class="pet-card"><div class="pet-action"><span class="pet-action-edit"><i class="far fa-edit"></i>Edit</span><span class="pet-action-delete"><i class="fas fa-times"></i>Delete</span></div><img src="https://placedog.net/500" alt="img-pets" /><div class="pet-information"><div class="pet-name">${petInfo.nombre}</div><div class="pet-phone-mail"><span class="pet-phone">${petInfo.celular}</span><span class="pet-separator">|</span><span class="pet-mail">${petInfo.correo}</span></div><div class="pet-country">${petInfo.pais}</div><div class="pet-description">${petInfo.descripcion}</div></div></article>`;
 
+  modal();
+  apperModalClose();
   name.value = "";
   phone.value = "";
   email.value = "";
@@ -28,50 +30,7 @@ const addPet = (e) => {
   grayOut.style.display = "none";
 };
 
-const apperModalClose = () => {
-  const modalBody = document.querySelector(".modal-delete");
-  const grayOut = document.querySelector(".gray-out.close");
-  const formAddPet = document.querySelector("#formAddPet");
-
-  let iconsDeleteCard = Array.from(
-    document.querySelectorAll(".pet-action-delete")
-  );
-  iconsDeleteCard.forEach((icon) => {
-    icon.addEventListener("click", () => {
-      formAddPet.style.display = "none";
-      grayOut.style.display = "flex";
-      modalBody.style.display = "flex";
-      console.log("clcik");
-    });
-  });
-};
-
-const deleteCard = () => {
-  const modalBody = document.querySelector(".modal-delete");
-  const grayOut = document.querySelector(".gray-out.close");
-  let iconsDeleteCard = document.querySelector(".pet-action-delete");
-
-  let contenedorIcono = iconsDeleteCard.parentNode;
-  let contenedorPadre = contenedorIcono.parentNode;
-  contenedorPadre.parentNode.removeChild(contenedorPadre);
-
-  modalBody.style.display = "none";
-  grayOut.style.display = "none";
-};
-
-//Modal de pregunta si es que quiere eliminar la cards
-const modal = () => {
-  const modalBody = document.querySelector(".modal-delete");
-  const grayOut = document.querySelector(".gray-out.close");
-  const btnCancel = document.querySelector("#no");
-  const btnAccept = document.querySelector("#yes");
-  btnAccept.addEventListener("click", deleteCard);
-  btnCancel.addEventListener("click", () => {
-    modalBody.style.display = "none";
-    grayOut.style.display = "none";
-  });
-};
-
+//Modal añadir Pet Formulario
 const modalAddCardPet = () => {
   const btnAddPet = document.querySelector(".add-pet");
   const grayOut = document.querySelector(".gray-out");
@@ -98,6 +57,49 @@ const modalAddCardPet = () => {
   });
 };
 
-modal();
-apperModalClose();
+//Funcion eliminar card
+const deleteCard = () => {
+  const modalBody = document.querySelector(".modal-delete");
+  const grayOut = document.querySelector(".gray-out.close");
+  let iconsDeleteCard = document.querySelector(".pet-action-delete");
+
+  let contenedorIcono = iconsDeleteCard.parentNode;
+  let contenedorPadre = contenedorIcono.parentNode;
+  contenedorPadre.parentNode.removeChild(contenedorPadre);
+
+  modalBody.style.display = "none";
+  grayOut.style.display = "none";
+};
+//Modal close
+const apperModalClose = () => {
+  const modalBody = document.querySelector(".modal-delete");
+  const grayOut = document.querySelector(".gray-out.close");
+  const formAddPet = document.querySelector("#formAddPet");
+
+  let iconsDeleteCard = Array.from(
+    document.querySelectorAll(".pet-action-delete")
+  );
+  iconsDeleteCard.forEach((icon) => {
+    icon.addEventListener("click", () => {
+      formAddPet.style.display = "none";
+      grayOut.style.display = "flex";
+      modalBody.style.display = "flex";
+      console.log("clcik");
+    });
+  });
+};
+
+//Modal de pregunta si es que quiere eliminar la cards
+const modal = () => {
+  const modalBody = document.querySelector(".modal-delete");
+  const grayOut = document.querySelector(".gray-out.close");
+  const btnCancel = document.querySelector("#no");
+  const btnAccept = document.querySelector("#yes");
+  btnAccept.addEventListener("click", deleteCard);
+  btnCancel.addEventListener("click", () => {
+    modalBody.style.display = "none";
+    grayOut.style.display = "none";
+  });
+};
+
 modalAddCardPet();
