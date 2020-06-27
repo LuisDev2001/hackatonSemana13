@@ -63,6 +63,9 @@
   margin-top: 6px;
   text-align: center;
 }
+.pet-card .pet-separator {
+  margin: 0 4px;
+}
 .pet-card .pet-country {
   margin: 7px 0;
 }
