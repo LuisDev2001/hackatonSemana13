@@ -1,0 +1,14 @@
+@import "../../2-Tools/tools.scss";
+.wrapper {
+  max-width: 1440px;
+  min-width: 100%;
+  margin: 0 auto;
+  padding: 0 13px;
+  @include tabletV {
+    padding: 0 3%;
+  }
+  @include desktop {
+    padding: 0 13px;
+    margin: 0;
+  }
+}

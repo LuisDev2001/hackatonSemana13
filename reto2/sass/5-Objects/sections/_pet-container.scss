@@ -1,0 +1,19 @@
+@import "../../2-Tools/tools.scss";
+.pet .wrapper {
+  background: var(--color-white);
+  padding: 1.5rem 13px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-content: center;
+  grid-row-gap: 1rem;
+
+  @include tabletV {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

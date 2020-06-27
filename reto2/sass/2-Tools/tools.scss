@@ -1,0 +1,18 @@
+//Mixins
+//tablets
+$tabletV: 768px;
+//desktops
+$desktop: 1200px;
+
+//Desktop
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+//Tablet
+@mixin tabletV {
+  @media (min-width: #{$tabletV}) {
+    @content;
+  }
+}

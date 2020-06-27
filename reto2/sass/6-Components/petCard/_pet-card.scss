@@ -1,0 +1,29 @@
+@import "../../2-Tools/tools.scss";
+.pet-card {
+  border: 1px solid var(--color-gray3);
+  padding: 7px 15px;
+  transition: 0.3s ease box-shadow;
+  background: var(--color-white);
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  }
+  &:hover .pet-action {
+    opacity: 1;
+  }
+
+  img {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+  .pet-information {
+    margin-top: 6px;
+    text-align: center;
+  }
+  .pet-country {
+    margin: 7px 0;
+  }
+}

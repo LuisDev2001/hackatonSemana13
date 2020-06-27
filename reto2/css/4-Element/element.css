@@ -1,0 +1,16 @@
+h2,
+a {
+  font-family: "Helvetica";
+}
+
+h1,
+p,
+span {
+  font-family: Arial;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=element.css.map */
